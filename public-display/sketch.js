@@ -17,7 +17,8 @@ let imgDisplay;
 
 //Variable pantalla
 let caseScreen;
-
+let controllerOrder;
+let myController;
 
 //pre cargar imagen
 
@@ -40,7 +41,7 @@ function setup() {
 
 socket.on('myName',(controllerOrder)=>{
 
-
+    myController = controllerOrder;
     // text(controllerOrder,20,80)
     console.log(controllerOrder);
  
@@ -67,7 +68,7 @@ function draw() {
         //Texto de puntajes altos
         fill(255);
        textSize(50);
-        text('playerName',520,250);
+        text(myController,520,250);
                     
             break;
     
